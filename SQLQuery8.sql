@@ -5,7 +5,7 @@
 
 
 
---Part ñ A:
+--Part ‚Äì A:
 
 
 --1. Display the result of 5 multiply by 30.
@@ -78,7 +78,7 @@ SELECT RAND();
 
 
 
---Part ñ B:
+--Part ‚Äì B:
 
 
 --Create and insert the following records in the EMP_MASTER table.
@@ -130,7 +130,7 @@ SELECT POWER(23,2),POWER(14,3);
 
 
 
---Part ñ C:
+--Part ‚Äì C:
 
 
 --1. Retrieve the details of employees whose total earnings (Salary + Commission) are greater than 15000.
@@ -152,15 +152,22 @@ SELECT *
 FROM EMP_MASTER
 WHERE  (JoiningDate < '2005-01-01') AND ((Salary + Commission) > 15000);
 
---4. Find employees whose total earnings (Salary + Commission) are at least double their salary.SELECT * 
+--4. Find employees whose total earnings (Salary + Commission) are at least double their salary.
+
+SELECT * 
 FROM EMP_MASTER
-WHERE (Salary + Commission) >= Salary * 2;--String functions
+WHERE (Salary + Commission) >= Salary * 2;
 
 
---Part ñ A:
+
+--String functions
 
 
---1. Find the length of following. (I) NULL (II) ë hello í (III) Blank
+
+--Part ‚Äì A:
+
+
+--1. Find the length of following. (I) NULL (II) ‚Äò hello ‚Äô (III) Blank
 
 SELECT LEN(NULL),LEN('Hello'),LEN('');
 
@@ -180,11 +187,11 @@ SELECT LEFT('nakul',3);
 
 SELECT SUBSTRING('nakulkachhava',3,10);
 
---5. Write a query to convert ëabc123efgí to ëabcXYZefgí & ëabcabcabcí to ëab5ab5ab5í using REPLACE.
+--5. Write a query to convert ‚Äòabc123efg‚Äô to ‚ÄòabcXYZefg‚Äô & ‚Äòabcabcabc‚Äô to ‚Äòab5ab5ab5‚Äô using REPLACE.
 
 SELECT REPLACE('abc123efg','123','XYZ'), REPLACE('abcabcabc','c','5');
 
---6. Write a query to display ASCII code for ëaí,íAí,ízí,íZí, 0, 9.
+--6. Write a query to display ASCII code for ‚Äòa‚Äô,‚ÄôA‚Äô,‚Äôz‚Äô,‚ÄôZ‚Äô, 0, 9.
 
 SELECT ASCII('a'),ASCII('A'),ASCII('z'),ASCII('Z'),ASCII(0),ASCII(9);
 
@@ -192,19 +199,19 @@ SELECT ASCII('a'),ASCII('A'),ASCII('z'),ASCII('Z'),ASCII(0),ASCII(9);
 
 SELECT CHAR(97),CHAR(65),CHAR(122),CHAR(90),CHAR(48),CHAR(57);
 
---8. Write a query to remove spaces from left of a given string ëhello world ë.
+--8. Write a query to remove spaces from left of a given string ‚Äòhello world ‚Äò.
 
 SELECT LTRIM('    hello world');
 
---9. Write a query to remove spaces from right of a given string ë hello world ë.
+--9. Write a query to remove spaces from right of a given string ‚Äò hello world ‚Äò.
 
 SELECT RTRIM('hello world     ');
 
---10. Write a query to display first 4 & Last 5 characters of ëSQL Serverí.
+--10. Write a query to display first 4 & Last 5 characters of ‚ÄòSQL Server‚Äô.
 
 SELECT LEFT('SQL Server',4), RIGHT('SQL Server',5);
 
---11. Write a query to convert a string ë1234.56í to number (Use cast and convert function).
+--11. Write a query to convert a string ‚Äò1234.56‚Äô to number (Use cast and convert function).
 
 SELECT CAST('1234.56' AS DECIMAL(8,2));
 
@@ -225,20 +232,20 @@ SELECT CONVERT(INT,10.58);
 
 
 --14. Combine two strings using + sign as well as CONCAT ().
---15. Find reverse of ìDarshanî.
+--15. Find reverse of ‚ÄúDarshan‚Äù.
 --16. Repeat your name 3 times.
---Part ñ B: Perform following queries on EMP_MASTER table.
+--Part ‚Äì B: Perform following queries on EMP_MASTER table.
 --1. Find the length of EMP Name and City columns.
 --2. Display EMP Name and City columns in lower & upper case.
 --3. Display first three characters of EMP Name column.
 --4. Display 3rd to 10th character of city column.
 --5. Write a query to display first 4 & Last 5 characters of EMP Name column.
---Part ñ C: Perform following queries on EMP_MASTER table.
+--Part ‚Äì C: Perform following queries on EMP_MASTER table.
 --1. Put 10 space before EMP Name using function.
 --2. Combine EMP Name and city columns using + sign as well as CONCAT ().
 --3. Combine all columns using + sign as well as CONCAT ().
 --4. Combine the result as < EMP Name > Lives in <City>.
---5. Combine the result as ëEMP no of < EMP Name> is <EmpNo> .
+--5. Combine the result as ‚ÄòEMP no of < EMP Name> is <EmpNo> .
 --6. Retrieve the names of all employee where the third character of the Name is a vowel.
 --7. Concatenate the name and city of students who have a name that ends with the letter 'r' and a city that
---starts with 'R'.
+--starts with 'R'.
